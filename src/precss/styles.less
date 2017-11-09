@@ -1,0 +1,107 @@
+@import "reset.less";
+@import "mixin.less";
+@import "vars.less";
+
+body, html{
+  height: 100%;
+}
+
+.wrapper {
+  .flex();
+  flex-direction: column;
+  font-family: Arial;
+  min-height: 100%;
+  background: url("/images/background.png");
+  background-position: 10% 0%;
+  background-repeat: repeat-x;
+}
+
+a {
+  &:link {
+    color: @text_color;
+    text-decoration-line: none;
+  }
+
+  &:visited {
+    color: @text_color;
+  }
+}
+/*Header*/
+.wrapper .head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: @blue_color;
+
+  &_login {
+    flex-basis: 60%;
+    margin-top: 5px;
+
+    &_forget {
+      float: left;
+    }
+  }
+
+  & .head_logo {
+    color: none;
+    flex-basis: 39%;
+    font: bold italic 40px arial;
+    letter-spacing: -2px;
+    margin-left: 1%;
+  }
+}
+
+/*Main content*/
+.wrapper .greeting {
+  .flex();
+  flex-direction: column;
+  margin: 1% auto;
+  max-width: 400px;
+  flex: 1 0 auto;
+
+    &_page {
+      text-align: center;
+      font: bold normal 30px arial;
+      color: #303030;
+      background-color: @text_color;
+
+      &_info {
+        font: normal normal 18px arial;
+        color: #4a4a4a;
+      }
+    }
+  &_registration {
+    margin-bottom: auto;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: @text_color;
+    color: #303030;
+
+    &_input {
+      width: 95%;
+    }
+
+    &_form {
+      margin-left: auto;
+      max-width: 95%;
+    }
+  }
+}
+
+/*Footer*/
+.wrapper .foo {
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5%;
+  background-color: @blue_color;
+  color: #303030;
+}
+
+/*Buttons*/
+.btn_submit {
+  .btn_confirm();
+}
+
