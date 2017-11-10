@@ -11,9 +11,6 @@ body, html{
   flex-direction: column;
   font-family: Arial;
   min-height: 100%;
-  background: url("/images/background.png");
-  background-position: 10% 0%;
-  background-repeat: repeat-x;
 }
 
 a {
@@ -55,15 +52,17 @@ a {
 .wrapper .greeting {
   .flex();
   flex-direction: column;
-  margin: 1% auto;
-  max-width: 400px;
+  background: url("/images/background.png");
+  background-position: 10% 0%;
+  background-repeat: repeat-x;
   flex: 1 0 auto;
 
     &_page {
+      .block_style();
       text-align: center;
       font: bold normal 30px arial;
-      color: #303030;
-      background-color: @text_color;
+      max-width: 400px;
+      margin: 1% auto 0;
 
       &_info {
         font: normal normal 18px arial;
@@ -71,11 +70,11 @@ a {
       }
     }
   &_registration {
-    margin-bottom: auto;
+    .block_style();
+    margin: 0 auto auto;
     padding-bottom: 5px;
+    max-width: 400px;
     width: 100%;
-    background-color: @text_color;
-    color: #303030;
 
     &_input {
       width: 95%;
@@ -84,20 +83,19 @@ a {
     &_form {
       margin-left: auto;
       max-width: 95%;
+      color: @text_color_second;
     }
   }
 }
 
 /*Footer*/
 .wrapper .foo {
-
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.5%;
   background-color: @blue_color;
-  color: #303030;
+  color: @text_color_second;
 }
 
 /*Buttons*/
