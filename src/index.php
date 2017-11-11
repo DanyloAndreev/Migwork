@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Migwork</title>
-	<link href="css/styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Migwork</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
-	<header class="head">
+    <header class="head">
         <div class="head_logo">
-            <a href="#">Migwork</a>
+            <a href="http://localhost/migwork/src/index.php">Migwork</a>
         </div>
         <div class="head_login">
             <form method="post" name="login" action="#">

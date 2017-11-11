@@ -1,3 +1,4 @@
+
  //подключение модулей
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -20,6 +21,9 @@ const config = {
 	},
 	html: {
 		src: '/**/*.html',
+	},
+	php: {
+		src: '/**/*.php'
 	}
 };
 
@@ -53,9 +57,12 @@ gulp.task('build', function() {
 	}));
 });
 
+
+
 //смотрим за изменениями в файле
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch(config.src + config.html.src).on('change', reload);
+	gulp.watch(config.src + config.php.src).on('change', reload);
 	gulp.watch(config.src + config.css.watch, ['build']); // смотри все файлы в этой папке и запускай команду билд
 	
 });
@@ -64,10 +71,7 @@ gulp.task('watch', ['browser-sync'], function() {
 //запускает браузер синк
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: config.src
-        }
+        proxy: "migwork",
+        notify: false
     });
 });
-
-
