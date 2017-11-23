@@ -9,7 +9,8 @@ body, html{
 .wrapper {
   .flex();
   flex-direction: column;
-  font-family: Arial;
+  font-family: Arial, serif;
+  font-size: 0.95em;
   min-height: 100%;
 }
 
@@ -31,30 +32,49 @@ a {
   background-color: @blue_color;
 
   &_login {
-    flex-basis: 60%;
-    margin-top: 5px;
+    flex-basis: 75%;
+    margin: 5px 1% auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 535px) {
+      flex-basis: 60%;
+    }
 
     &_forget {
-      float: left;
+      margin-top: -5px;
     }
   }
 
-  & .head_logo {
-    color: none;
-    flex-basis: 39%;
+  &_logo {
+    flex-basis: 10%;
     font: bold italic 40px arial;
     letter-spacing: -2px;
-    margin-left: 1%;
+    margin: 0 auto 3px 1%;
+
+    @media screen and (max-width: 535px) {
+      flex-basis: 50%;
+      margin: 1% 0;
+    }
+
+    @media screen  and (max-width: 644px) {
+      flex-basis: 30%;
+    }
+  }
+
+  &_menu {
+    .flex();
+    margin: auto 1%;
   }
 }
+
 
 /*Main content*/
 .wrapper .greeting {
   .flex();
   flex-direction: column;
-  background: url("/images/background.png");
-  background-position: 10% 0%;
-  background-repeat: repeat-x;
+  background: url("/src/images/background.png") repeat-x 10% 0;
   flex: 1 0 auto;
 
     &_page {
@@ -63,6 +83,10 @@ a {
       font: bold normal 30px arial;
       max-width: 400px;
       margin: 3% auto 0;
+
+      @media screen and (max-width: 535px) {
+        margin-top: 0;
+      }
 
       &_info {
         font: normal normal 18px arial;
@@ -77,7 +101,7 @@ a {
     width: 100%;
 
     &_input {
-      width: 95%;
+      width: 94%;
     }
 
     &_form {
@@ -93,13 +117,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0.5%;
+  padding: 1% 0.5% 0.5%;
   background-color: @blue_color;
-  color: @text_color_second;
+  color: @text_color;
 }
 
 /*Buttons*/
 .btn_submit {
   .btn_confirm();
+}
+
+.dropdown {
+  .dropdown();
 }
 

@@ -8,14 +8,32 @@
 
 .btn_confirm {
   font-weight: 700;
-  color: white;
+  color: #fff;
   padding: 3px;
   border-radius: 3px;
-  background: rgb(64,199,129);
+  background: #00CC00;
   border: 1px solid transparent;
+  margin-bottom: 5px;
+  margin-top: 1%;
+
+  @media screen and (max-width: 535px) {
+    margin-bottom: 0;
+  }
 }
 
 .block_style {
   color: @text_color_second;
   background-color: @text_color;
+}
+
+.dropdown {
+
+  select {
+    .btn_confirm();
+  }
+
+  option {
+    background: #fff;
+    color: @text_color_second;
+  }
 }

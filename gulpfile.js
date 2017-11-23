@@ -24,6 +24,12 @@ const config = {
 	},
 	php: {
 		src: '/**/*.php'
+	},
+	tpl: {
+		src: '/**/*.tpl'
+	},
+	png: {
+		src: '/**/*.png'
 	}
 };
 
@@ -63,6 +69,8 @@ gulp.task('build', function() {
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch(config.src + config.html.src).on('change', reload);
 	gulp.watch(config.src + config.php.src).on('change', reload);
+	gulp.watch(config.src + config.tpl.src).on('change', reload);
+	gulp.watch(config.src + config.png.src).on('change', reload);
 	gulp.watch(config.src + config.css.watch, ['build']); // смотри все файлы в этой папке и запускай команду билд
 	
 });
