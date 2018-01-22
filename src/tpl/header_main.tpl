@@ -14,8 +14,6 @@
                 <option><a href="#">Группы</a></option>
             </select>
         </div>
-        <div class="head_user_icon">
-            <a href="#"><img src="../src/images/avatar.png"></a>
-        </div>
+        <div class="head_user_icon"></div>
     </div>
 </header>
