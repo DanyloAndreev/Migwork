@@ -121,8 +121,10 @@ a {
 
 .main {
   flex-grow: 2;
+  position: relative;
 
   &__profile {
+    background-color: @text_color;
     .avatar {
       position: relative;
 
@@ -131,6 +133,7 @@ a {
 
         img {
           max-height: 270px;
+          width: 100%;
         }
 
         @media all and (orientation:landscape) {
@@ -164,6 +167,7 @@ a {
       width: 97%;
       margin: 10px auto;
       padding: 2px;
+      background-color: #ffffff;
 
       &__status {
         font-weight: 400;
@@ -188,6 +192,7 @@ a {
 
     .status {
       box-shadow: 0 0 10px @text_color;
+      background-color: #ffffff;
       margin: 10px auto;
       width: 97%;
       padding: 2px;
@@ -200,6 +205,7 @@ a {
 
     .progress {
       box-shadow: 0 0 10px @text_color;
+      background-color: #ffffff;
       margin: 10px auto;
       width: 97%;
       padding: 2px;
@@ -219,6 +225,115 @@ a {
         .negativeVal {
           color: @red;
         }
+      }
+    }
+
+    .post {
+      min-height: 320px;
+      box-shadow: 0 0 10px @text_color;
+      background-color: #ffffff;
+      width: 97%;
+      margin: 10px auto;
+
+      &__author {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 50px;
+        padding: 2px;
+
+        &_ava {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          background: url("http://localhost/migwork/src/images/icons/profile.png") no-repeat;
+        }
+
+        &_nick {
+          font-weight: 700;
+          font-size: 13pt;
+        }
+
+        &_postTime {
+          color: @text_color_second;
+        }
+
+        &_menu {
+          .btmMenu ();
+          position: relative;
+
+          img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+        }
+
+        &_container {
+          padding: 3px;
+          flex-grow: 2;
+        }
+      }
+
+      &__picture {
+        min-height: 210px;
+        width: 100%;
+      }
+
+      &__text {
+        min-height: 30px;
+      }
+
+      &__stats {
+        min-height: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+
+        &_likes, &_comments, &_share {
+          .stats ();
+          flex-grow: 2;
+          display: flex;
+          flex-wrap: nowrap;
+          padding-left: 10%;
+
+          .counter {
+            padding: 3px;
+          }
+        }
+      }
+    }
+
+    .footerMenu {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px @text_color;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+      &__home {
+        .btmMenu ();
+        background: url("http://localhost/migwork/src/images/icons/home.png") no-repeat;
+      }
+      &__profile {
+        .btmMenu ();
+        background: url("http://localhost/migwork/src/images/icons/profile.png") no-repeat;
+      }
+      &__messages {
+        .btmMenu ();
+        background: url("http://localhost/migwork/src/images/icons/messages.png") no-repeat;
+      }
+      &__groups {
+        .btmMenu ();
+        background: url("http://localhost/migwork/src/images/icons/groups.png") no-repeat;
+      }
+      &__search {
+        .btmMenu ();
+        background: url("http://localhost/migwork/src/images/icons/search.png") no-repeat;
       }
     }
   }

@@ -2,7 +2,7 @@
     <div class="head_logo">
         <a href="#">Migwork</a>
     </div>
-    <div class="head_menu">
+    <!--<div class="head_menu">
         <div class="dropdown">
             <select>
                 <option><a href="#">Меню</a></option>
@@ -15,5 +15,5 @@
             </select>
         </div>
         <div class="head_user_icon"></div>
-    </div>
+    </div>-->
 </header>
