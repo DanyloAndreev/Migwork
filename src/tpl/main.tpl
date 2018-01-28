@@ -3,7 +3,7 @@
         <div class="avatar">
             <div class="avatar__foto"><img src="/images/ava1.jpg"></div>
             <div class="avatar__info">
-                <div class="avatar__info_nick">Юля Жушма</div>
+                <div class="avatar__info_nick">Юля Жушмаfffffffffff</div>
                 <div class="avatar__info_status">Online</div>
             </div>
             <div class="avatar__buttons">

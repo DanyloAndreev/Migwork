@@ -73,8 +73,6 @@ a {
   }
 }
 
-
-
 /*Main content*/
 .wrapper .greeting {
   .flex();
@@ -142,8 +140,6 @@ a {
           width: 100%;
           margin-top: 40%;
           padding-top: 6px;
-          img {
-          }
 
           @media all and (orientation:landscape) {
             width: 20%;
@@ -157,33 +153,46 @@ a {
           position: absolute;
           bottom: 13%;
           left: 3%;
-          font-size: 12pt;
+          font-size: 2.5vh;
           color: #ffffff;
-          text-shadow: 0 0 2px @text_color;
+          text-shadow: 0 0 1px @text_color_second;
           opacity: 0.8;
+
+          @media screen and (orientation:landscape) {
+            margin-left: 25vw;
+          }
         }
 
         &_nick {
+          max-width: 70vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           position: absolute;
           bottom: 18%;
           left: 3%;
-          font-size: 22pt;
+          font-size: 5vh;
           color: #ffffff;
-          text-shadow: 0 0 1px @text_color;
+          text-shadow: 0 0 1px @text_color_second;
+
+          @media screen and (orientation:landscape) {
+            margin-left: 25vw;
+          }
         }
       }
 
       &__foto {
-        height: 30%;
+        height: 40vh;
         overflow: hidden;
 
         img {
-          max-width: 100%;
+          margin: auto;
         }
 
         @media all and (orientation:landscape) {
-          width: 50%;
           margin: auto;
+          max-width: 50%;
+          height: 50vh;
         }
       }
     }
