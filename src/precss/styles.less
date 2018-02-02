@@ -121,6 +121,11 @@ a {
   flex-grow: 2;
   position: relative;
 
+  @media screen and (orientation: landscape) {
+    width: 70%;
+    align-self: center;
+  }
+
   &__profile {
     background-color: @text_color;
 
@@ -129,21 +134,13 @@ a {
 
       &__buttons {
         text-align: center;
-        position: absolute;
-        top: 8px;
-        right: 2%;
-        width: 37px;
+        display: flex;
+        flex-wrap: wrap;
 
         &_message, &_addFriend, &_mail, &_call {
           .btn_confirm();
-          font-size: 12pt;
-          width: 100%;
-          margin-top: 40%;
-          padding-top: 6px;
-
-          @media all and (orientation:landscape) {
-            width: 20%;
-          }
+          margin: 5px auto;
+          width: 23%;
         }
       }
 
@@ -151,7 +148,7 @@ a {
 
         &_status {
           position: absolute;
-          bottom: 13%;
+          bottom: 12%;
           left: 3%;
           font-size: 2.5vh;
           color: #ffffff;
@@ -159,7 +156,7 @@ a {
           opacity: 0.8;
 
           @media screen and (orientation:landscape) {
-            margin-left: 25vw;
+            margin-left: 12vw;
           }
         }
 
@@ -169,14 +166,14 @@ a {
           text-overflow: ellipsis;
           white-space: nowrap;
           position: absolute;
-          bottom: 18%;
+          bottom: 17%;
           left: 3%;
           font-size: 5vh;
           color: #ffffff;
           text-shadow: 0 0 1px @text_color_second;
 
           @media screen and (orientation:landscape) {
-            margin-left: 25vw;
+            margin-left: 12vw;
           }
         }
       }
@@ -185,14 +182,10 @@ a {
         height: 40vh;
         overflow: hidden;
 
-        img {
-          margin: auto;
-        }
-
-        @media all and (orientation:landscape) {
-          margin: auto;
-          max-width: 50%;
+        @media screen and (orientation:landscape) {
           height: 50vh;
+          max-width: 70%;
+          margin-left: 15%;
         }
       }
     }
@@ -204,24 +197,26 @@ a {
       margin: 0 auto;
       padding: 2px;
       background-color: #ffffff;
+      display: flex;
 
-      &__contacts {
-        font-weight: 700;
-        color: @text_color_second;
-        font-size: 11pt;
+      &__stats {
+        width: 28px;
       }
-    }
 
-    .status {
-      box-shadow: 0 0 10px @text_color;
-      background-color: #ffffff;
-      margin: 5px auto;
-      width: 97%;
-      padding: 2px;
-      font-size: 11pt;
+      &__about {
+        margin-left: 12%;
 
-      table {
-        width: 100%;
+        &_data {
+          color: @blue_color;
+          font-weight: 700;
+          font-size: 2.3vh;
+          margin-top: 4px;
+          height: 28px;
+
+          @media screen and (orientation: landscape) {
+            font-size: 2.2vw;
+          }
+        }
       }
     }
 
@@ -231,13 +226,23 @@ a {
       margin: 5px auto;
       width: 97%;
       padding: 2px;
-      font-size: 11pt;
+      font-size: 2.3vh;
+      display: flex;
+      flex-wrap: nowrap;
 
-      table {
+      @media screen and (orientation: landscape) {
+        font-size: 2vw;
+      }
+
+      &__block {
         width: 100%;
+        flex-shrink: 1;
+        display: flex;
+        flex-wrap: wrap;
 
         .property {
           font-weight: 700;
+          flex-basis: 50%;
         }
 
         .positiveVal {
@@ -301,6 +306,7 @@ a {
       &__picture {
         min-height: 210px;
         width: 100%;
+
       }
 
       &__text {

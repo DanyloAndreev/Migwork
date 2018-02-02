@@ -3,56 +3,49 @@
         <div class="avatar">
             <div class="avatar__foto"><img src="/images/ava1.jpg"></div>
             <div class="avatar__info">
-                <div class="avatar__info_nick">Юля Жушмаfffffffffff</div>
+                <div class="avatar__info_nick">Андреев Даниил</div>
                 <div class="avatar__info_status">Online</div>
             </div>
-            <div class="avatar__buttons">
-                <button class="avatar__buttons_addFriend"><img src="/images/icons/plus.png"></button>
-                <button class="avatar__buttons_message"><img src="/images/icons/message.png"></button>
-                <button class="avatar__buttons_mail"><img src="/images/icons/email.png"></button>
-                <button class="avatar__buttons_call"><img src="/images/icons/call.png"></button>
-            </div>
+        </div>
+        <div class="avatar__buttons">
+            <button class="avatar__buttons_addFriend"><img src="/images/icons/plus.png"></button>
+            <button class="avatar__buttons_message"><img src="/images/icons/message.png"></button>
+            <button class="avatar__buttons_call"><img src="/images/icons/call.png"></button>
+            <button class="avatar__buttons_mail"><img src="/images/icons/email.png"></button>
         </div>
         <div class="progress">
-            <table>
-                <tr>
-                    <td class="property">&#36</td><td class="positiveVal">+100&#36/mnth.</td><td class="property">Contcts</td><td class="negativeVal">-23</td><td class="property">Viewed</td><td class="positiveVal">+552</td>
-                </tr>
-                <tr>
-                    <td class="property">Exp.</td><td class="positiveVal">+1.5yrs.</td><td class="property">Groups</td><td class="negativeVal">+4</td><td class="property">Offers</td><td class="positiveVal">+2</td>
-                </tr>
-            </table>
-        </div>
-        <div class="info">
-            <div class="info__contacts">
-                <p>danyloandreiev@gmail.com</p>
-                <p>+380981005006</p>
-                <p>danyloandreiev</p>
+            <div class="progress__block">
+                <div class="property">&#36/mth</div><div class="positiveVal">+100</div>
+                <div class="property">Exp.</div><div class="positiveVal">+1.5yrs.</div>
+            </div>
+            <div class="progress__block">
+                <div class="property">Contcts</div><div class="negativeVal">-23</div>
+                <div class="property">Groups</div><div class="negativeVal">-4</div>
+            </div>
+            <div class="progress__block">
+                <div class="property">Viewed</div><div class="positiveVal">+552</div>
+                <div class="property">Offers</div><div class="positiveVal">+2</div>
             </div>
         </div>
-        <div class="status">
-            <table>
-                <tr>
-                    <td>Дата рождения</td>
-                    <td>15.07.1987</td>
-                </tr>
-                <tr>
-                    <td>Откуда:</td>
-                    <td>Украина, Никополь</td>
-                </tr>
-                <tr>
-                    <td>Работаю в:</td>
-                    <td>Украина, Киев</td>
-                </tr>
-                <tr>
-                    <td>Зарабатываю:</td>
-                    <td>1000-1500$</td>
-                </tr>
-                <tr>
-                    <td>На должности:</td>
-                    <td>web-developer</td>
-                </tr>
-            </table>
+        <div class="info">
+            <div class="info__stats">
+                <div class="info__stats_icon"><img src="/images/icons/st_email.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_tel.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_brth.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_from.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_job.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_earn.png" alt=""></div>
+                <div class="info__stats_icon"><img src="/images/icons/st_position.png" alt=""></div>
+            </div>
+            <div class="info__about">
+                <div class="info__about_data">danyloandreiev@gmail.com</div>
+                <div class="info__about_data">+38 098 1005006</div>
+                <div class="info__about_data">15 July 1987</div>
+                <div class="info__about_data">Nikopol, Ukraine</div>
+                <div class="info__about_data">Kyiv, Ukraine</div>
+                <div class="info__about_data">1000$/mth.</div>
+                <div class="info__about_data">Web developer</div>
+            </div>
         </div>
         <div class="post">
             <div class="post__author">
