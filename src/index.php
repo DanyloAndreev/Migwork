@@ -1,3 +1,4 @@
+<?php require_once ('/controller/database.class.php');?>
 <?php require_once ('/tpl/meta.tpl');?>
 <?php require_once ('/tpl/header.tpl');?>
 <?php require_once ('/tpl/greeting.tpl')?>
