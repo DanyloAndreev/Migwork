@@ -13,7 +13,7 @@ class DataBase {
     private $dbh;
     private $error;
 
-    public $stmt;
+    private $stmt;
 
 
     public static function getDB() {
@@ -100,14 +100,3 @@ class DataBase {
         return $this->stmt->debugDumpParams();
     }
 }
-$db = DataBase::getDB();
-
-
-$db->beginTransaction();
-$db->query('INSERT INTO users (name, surname, email) VALUES (:name, :surname, :email)');
-$db->bind(':name', 'Dan');
-$db->bind(':surname', 'Andreev');
-$db->bind(':email', 'daanyloandreiev@gmail.com');
-$db->execute();
-echo $db->lastInsertId();
-$db->endTransaction();
