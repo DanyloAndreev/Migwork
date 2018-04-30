@@ -1,19 +1,24 @@
 <?php
 include_once 'database.class.php';
 
-class addRow
+class insertRequest
 {
     private $params;
     private $values;
+    private $table;
 
     //получить в аргумент массив(первая пара имя таблицы, остальные пары имя столбца
     // +значение
-    public function __construct($input)
+    public function __construct($input, $table)
     {
         foreach ($input as $key => $value)
         {
             $this->params[] = $key;
             $this->values[] = $value;
+        }
+        foreach ($table as $value)
+        {
+            $this->table = $value;
         }
     }
 
@@ -21,16 +26,16 @@ class addRow
     {
         //массив параметров в строку
         $params = implode(", ", $this->params);
-        $params = trim(stristr($params,' '));
 
         //подготовка VALUES
         $preValues = '';
-        for ($i = 1; $i < count($this->params); $i++)
+        for ($i = 0; $i < count($this->params); $i++)
         {
             $preValues .= ':' . $this->params[$i] . ', ';
         }
 
-        return 'INSERT INTO '.$this->values[0].' '.'('.$params.')'
+        return 'INSERT INTO '.$this->table.' '.'('.$params.')'
             .' VALUES '.'('.substr(trim($preValues), 0, -1).')' . '';
     }
 }
+

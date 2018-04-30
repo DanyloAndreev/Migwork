@@ -1,17 +1,17 @@
 <main class="main">
     <div class="main__profile">
         <div class="avatar">
-            <div class="avatar__foto"><img src="/images/ava1.jpg"></div>
+            <div class="avatar__foto"><img src="../images/ava1.jpg"></div>
             <div class="avatar__info">
                 <div class="avatar__info_nick">Андреев Даниил</div>
                 <div class="avatar__info_status">Online</div>
             </div>
         </div>
         <div class="avatar__buttons">
-            <button class="avatar__buttons_addFriend"><img src="/images/icons/plus.png"></button>
-            <button class="avatar__buttons_message"><img src="/images/icons/message.png"></button>
-            <button class="avatar__buttons_call"><img src="/images/icons/call.png"></button>
-            <button class="avatar__buttons_mail"><img src="/images/icons/email.png"></button>
+            <button class="avatar__buttons_addFriend"><img src="../images/icons/plus.png"></button>
+            <button class="avatar__buttons_message"><img src="../images/icons/message.png"></button>
+            <button class="avatar__buttons_call"><img src="../images/icons/call.png"></button>
+            <button class="avatar__buttons_mail"><img src="../images/icons/email.png"></button>
         </div>
         <div class="progress">
             <div class="progress__block">
@@ -29,13 +29,13 @@
         </div>
         <div class="info">
             <div class="info__stats">
-                <div class="info__stats_icon"><img src="/images/icons/st_email.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_tel.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_brth.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_from.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_job.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_earn.png" alt=""></div>
-                <div class="info__stats_icon"><img src="/images/icons/st_position.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_email.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_tel.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_brth.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_from.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_job.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_earn.png" alt=""></div>
+                <div class="info__stats_icon"><img src="../images/icons/st_position.png" alt=""></div>
             </div>
             <div class="info__about">
                 <div class="info__about_data">danyloandreiev@gmail.com</div>
@@ -50,17 +50,17 @@
         <div class="post">
             <div class="post__author">
                 <div class="post__author_ava">
-                    <img src="/images/ava1.jpg" alt="ava">
+                    <img src="../images/ava1.jpg" alt="ava">
                 </div>
                 <div class="post__author_container">
                     <div class="post__author_nick">User Name</div>
                     <div class="post__author_postTime">10 minutes ago</div>
                 </div>
                 <div class="post__author_menu">
-                    <img src="/images/icons/menu.png">
+                    <img src="../images/icons/menu.png">
                 </div>
             </div>
-            <div class="post__picture"><img src="/images/cat.jpg"></div>
+            <div class="post__picture"><img src="../images/cat.jpg"></div>
             <div class="post__text">
                 Если кто вдруг не знал, то сегодня один из самых важных праздников в году. Нет, Новый год не перенесли. Остальные праздники тоже остались на своих местах. Сегодня, ты не поверишь, День кошки!
                 Если кто вдруг не знал, то сегодня один из самых важных праздников в году. Нет, Новый год не перенесли. Остальные праздники тоже остались на своих местах. Сегодня, ты не поверишь, День кошки!
@@ -70,15 +70,15 @@
             </div>
             <div class="post__stats">
                 <div class="post__stats_likes">
-                    <div><img src="/images/icons/heart.png" alt="likes"></div>
+                    <div><img src="../images/icons/heart.png" alt="likes"></div>
                     <div class="counter">125</div>
                 </div>
                 <div class="post__stats_comments">
-                    <div><img src="/images/icons/comment.png" alt="comments"></div>
+                    <div><img src="../images/icons/comment.png" alt="comments"></div>
                     <div class="counter">77</div>
                 </div>
                 <div class="post__stats_share">
-                    <div><img src="/images/icons/share.png" alt="share"></div>
+                    <div><img src="../images/icons/share.png" alt="share"></div>
                 </div>
             </div>
         </div>
@@ -95,19 +95,19 @@
         </div>
         <div class="footerMenu">
             <div class="footerMenu__home">
-                <img src="/images/icons/home.png" alt="home">
+                <img src="../images/icons/home.png" alt="home">
             </div>
             <div class="footerMenu__profile">
-                <img src="/images/icons/profile.png" alt="profile">
+                <img src="../images/icons/profile.png" alt="profile">
             </div>
             <div class="footerMenu__messages">
-                <img src="/images/icons/messages.png" alt="messages">
+                <img src="../images/icons/messages.png" alt="messages">
             </div>
             <div class="footerMenu__groups">
-                <img src="/images/icons/groups.png" alt="groups">
+                <img src="../images/icons/groups.png" alt="groups">
             </div>
             <div class="footerMenu__search">
-                <img src="/images/icons/search.png" alt="search">
+                <img src="../images/icons/search.png" alt="search">
             </div>
         </div>
     </div>

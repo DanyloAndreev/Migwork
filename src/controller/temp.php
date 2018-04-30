@@ -41,14 +41,15 @@ echo 'Время выполнения скрипта: '.round(microtime(true) - 
 
 //добавление в таблицу
 //$db = DataBase::getDB();
-
-//$arr = array('table' => 'users',
+//
+//$table = array('table' => 'users');
+//$arr = array(
 //    'name' => 'Danylo',
 //    'surname' => 'Andreiev',
 //    'earn' => '1000',
 //    'email' => rand(1, 1000));
 //
-//$addRow = new addRow($arr);
+//$ins = new insertRequest($arr, $table);
 //
 //
 //foreach ($arr as $key => $value)
@@ -56,12 +57,53 @@ echo 'Время выполнения скрипта: '.round(microtime(true) - 
 //    $params[] = $key;
 //    $values[] = $value;
 //}
+//echo $ins->request();
 //$db->beginTransaction();
-//$db->query($addRow->request());
-//for ($i = 1; $i <count($arr); $i++)
+//$db->query($ins->request());
+//for ($i = 0; $i <count($arr); $i++)
 //{
 //    $db->bind(':'.$params[$i], $values[$i]);
 //}
 //$db->execute();
 //$db->endTransaction();
 //$db = null;
+$db = DataBase::getDB();
+
+$table = 'users';
+$params = array(
+    'name' => 'Danylo',
+    'surname' => 'Andreiev',
+    'email' => '106');
+$where = array(
+    'condition' => '=',
+    'name' => 'Danylo',
+    
+    );
+$order = array(
+    'field' => 'id',
+    'direction' => 'DESC'
+);
+$limit = 1;
+
+
+$selectRequest = new selectRequest($table, $params, $where, $order, $limit);
+//Select single row
+$db->query($selectRequest->single());
+
+
+foreach ($where as $key => $value)
+{
+    $par[] = $key;
+    $val[] = $value;
+}
+
+for ($i = 1; $i < count($par); $i++)
+{
+    $db->bind(':'.$par[$i], $val[$i]);
+}
+
+$row = $db->resultset();
+echo '<pre>';
+print_r($row);
+echo '</pre>';
+$db = null;
