@@ -81,7 +81,7 @@ $where = array(
     );
 $order = array(
     'field' => 'id',
-    'direction' => 'DESC'
+    'direction' => 'ASC'
 );
 $limit = 1;
 

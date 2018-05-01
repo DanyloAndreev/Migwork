@@ -1,7 +1,8 @@
 <?php
 include 'config.php';
 
-class DataBase {
+class DataBase
+{
     private static $db = null;
 
     private $host = DB_HOST;
@@ -16,12 +17,14 @@ class DataBase {
     private $stmt;
 
 
-    public static function getDB() {
+    public static function getDB()
+    {
         if (self::$db == null) self::$db = new DataBase();
         return self::$db;
     }
 
-    public function __construct(){
+    public function __construct()
+    {
         $dsn = 'mysql:host='. $this->host .';dbname='. $this->dbname.';charset='.$this->charset;
 
         $options = array(
@@ -31,22 +34,27 @@ class DataBase {
             PDO::ATTR_EMULATE_PREPARES => false
         );
 
-        try {
+        try
+        {
             $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
-
         }
-        catch (PDOException $e) {
+        catch (PDOException $e)
+        {
             $this->error = $e->getMessage();
         }
     }
 
-    public function query($query) {
+    public function query($query)
+    {
         $this->stmt = $this->dbh->prepare($query);
     }
 
-    public function bind($param, $value, $type = null){
-        if(is_null($type)){
-            switch (true){
+    public function bind($param, $value, $type = null)
+    {
+        if(is_null($type))
+        {
+            switch (true)
+            {
                 case is_int($value):
                 $type = PDO::PARAM_INT;
                 break;
@@ -64,11 +72,11 @@ class DataBase {
     }
 
     public function execute(){
-        return $this->stmt->execute();
+        return $this->stmt->execute();//запускает выражение
     }
     public function resultset(){
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);//возвращает в виде ассоциативного массива
     }
 
     public function single(){

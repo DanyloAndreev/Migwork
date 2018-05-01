@@ -12,3 +12,5 @@
 
 
 $collector = new Collector($_POST);
+$login = new Login($collector->where());
+$login->login();

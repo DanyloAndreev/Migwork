@@ -1,21 +1,27 @@
 <?php
 
+/*
+ * Собирает и обрабатывает пользовательские данные с форм
+ */
 class Collector
 {
-    private $params;
+    private $where;
    
     public function __construct($form)
     {
-        $this->params['email'] = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+        //формирует WHERE для SQL-запроса
+        $this->where['condition'] = '=';//email = email
+        $this->where['email'] = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
         
         if (is_string($form['pass']))
         {
-            $this->params['pass'] = $form['pass'];
+            $this->where['pass'] = md5($form['pass']);
         }
     }
     
-    public function params()
+    public function where()
     {
-        return $this->params;
+        return $this->where;
     }
+    
  }

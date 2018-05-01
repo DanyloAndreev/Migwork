@@ -12,8 +12,6 @@ class selectRequest
     private $orderValue;
     private $limit;
 
-    //получить в аргумент массив(первая пара имя таблицы, остальные пары имя столбца
-    // +значение
     public function __construct($table, $params, $where, $order, $limit)
     {
         $this->table = $table;
@@ -37,8 +35,14 @@ class selectRequest
 
     public function single()
     {
-        $params = implode(", ", $this->params);
-
+        if(count($this->params) == 0)
+        {
+            $params = '*';
+        }
+        else
+        {
+            $params = implode(", ", $this->params);
+        }
 
         //подготовка VALUES
         $preValues = '';
@@ -61,10 +65,5 @@ class selectRequest
 
         return 'SELECT '.$params.' FROM '.$this->table.' WHERE '.$preWhere.
             ' ORDER BY '.$preOrder.' LIMIT '.$this->limit;
-    }
-
-    public function resultset()
-    {
-
     }
 }
