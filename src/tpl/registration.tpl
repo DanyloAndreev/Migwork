@@ -3,9 +3,9 @@
         <p>Добавьте необходимые данные о себе</p>
     </div>
     <div class="greeting_registration">
-        <form method="post" name="registration_info" action="#" class="greeting_registration_form">
+        <form method="post" name="registration_info" action="../pages/registration.php" class="greeting_registration_form">
             <br>Я из<br>
-            <select class="greeting_registration_input" required>
+            <select class="greeting_registration_input" name="native_country" required>
                 <option value="AF">AFGHANISTAN</option>
                 <option value="AL">ALBANIA</option>
                 <option value="AD">ANDORRA</option>
@@ -86,7 +86,7 @@
                 <option value="VN">VIET NAM</option>
             </select>
             <br>Сейчас работаю в<br>
-            <select class="greeting_registration_input" required>
+            <select class="greeting_registration_input" name="work_at" required>
                 <option value="AF">AFGHANISTAN</option>
                 <option value="AL">ALBANIA</option>
                 <option value="AD">ANDORRA</option>
@@ -168,7 +168,7 @@
             </select>
             <br>
             <br>На должности<br>
-            <select class="greeting_registration_input" required>
+            <select class="greeting_registration_input" name="position" required>
                 <option value="">Агент коммерческий</option>
                 <option value="">Агент страховой</option>
                 <option value="">Адвокат</option>
@@ -310,7 +310,7 @@
                 <option value="">Юрист</option>
             </select>
             <br>Зарабатываю<br>
-            <select class="greeting_registration_input" required>
+            <select class="greeting_registration_input" name="earn" required>
                 <option value="">...100$</option>
                 <option value="">100-300$</option>
                 <option value="">300-500$</option>

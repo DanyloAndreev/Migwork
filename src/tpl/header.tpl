@@ -3,7 +3,7 @@
         <a href="#">Migwork</a>
     </div>
     <div class="head_login">
-        <form method="post" name="login" action="#">
+        <form method="post" name="login" action="../pages/autorization.php">
             <input name="email" type="email" placeholder="Введите email" required>
             <input name="pass" type="password" placeholder="Введите пароль" required>
             <input type="submit" value="Войти" class="btn_submit" name="login_submit">
