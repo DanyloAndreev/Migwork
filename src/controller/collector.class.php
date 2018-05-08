@@ -1,26 +1,47 @@
 <?php
-
 /*
- * Собирает и обрабатывает пользовательские данные с форм
+ * Собирает и обрабатывает пользовательские данные из форм
  */
 class Collector
 {
     private $where;
     private $params;
+    private $form;
    
     public function __construct($form)
     {
+        $this->form = $form;
+    }
+    
+    public function setWhere()
+    {
         /*формирует WHERE для SQL-запроса для авторизации*/
+        $form = $this->form;
         $this->where['condition'] = '=';//email = email
         $this->where['email'] = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
         
         if (is_string($form['pass']))
         {
-            $this->where['pass'] = md5(trim(strip_tags));
+            $this->where['pass'] = md5(trim(strip_tags($form['pass'])));
         }
+    }
+
+    public function setParams()
+    {
+       /*параметры для INSERT из формы регистрации*/
+        $form = $this->form;
         
-        /*параметры для INSERT из формы регистрации*/
-        $this->params['email'] = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);//Validate email
+        //Validate email
+        $this->params['email'] = filter_var($form['email'], FILTER_VALIDATE_EMAIL);
+
+        //validate password
+        if($this->validate($form['pass']) === $this->validate($form['pass_confirm']))
+        {
+            $this->params['pass'] = md5($this->validate($form['pass']));
+        }
+
+        //validate date
+        $this->params['birthday'] = $this->validate(str_replace("-","", $form['birthday']));
         
         //validate name
         $this->params['name'] = $this->validate($form['name']);//validate name
@@ -28,17 +49,36 @@ class Collector
         //validate surname
         $this->params['surname'] = $this->validate($form['surname']);//validate surname
         
-        //validate password
-        if($this->validate($form['pass']) === $this->validate($form['pass_confirm']))
-        {
-            $this->params['pass'] = md5($this->validate($form['pass']));
-        }
+        //validate country
+        $this->params['native_country'] = $this->validate($form['native_country']);
         
-        //validate date
-        $this->params['birthday'] = $this->validate(str_replace("-","", $form['birthday']));
-        
+        //validate country
+        $this->params['work_at'] = $this->validate($form['work_at']);
+
+        // validate position
+        $this->params['position'] = $this->validate($form['position']);
+
+        //validate Earn
+        $this->params['earn'] = $this->validate($form['earn']);
+
+        //validate about
+        $this->params['about'] = $this->validate($form['about']);
     }
     
+    /*Helpful functions*/
+    private function validate($input)
+    {
+        if(!empty($input) && is_string($input))
+        {
+            return trim(strip_tags(stripslashes(htmlspecialchars($input))));
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /*return functions*/
     public function where()
     {
         return $this->where;
@@ -47,17 +87,5 @@ class Collector
     public function params()
     {
         return $this->params;
-    }
-    
-    private function validate($input)
-    {
-        if(!empty($input) && is_string($input))
-        {
-            return trim(strip_tags(stripslashes($input)));
-        }
-        else
-        {
-            return false;
-        }
     }
  }

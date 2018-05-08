@@ -12,4 +12,26 @@ define("TBL_ORDER", array(
 ));
 define("TBL_LIMIT", "1");
 
+$paramsCountry = array(
+	'country_id',
+	'title_ru',
+	'Сountries'
+	);
+$paramsPosition = array(
+	'prof_id',
+	'prof_name',
+	'Professions'
+	);
+$paramsEarn = array(
+	'id',
+	'amount',
+	'Earn'
+	);
+$search = array(
+	'%optionNativeCountry%',
+	'%optionWorkAt%',
+	'%optionPosition%',
+	'%optionEarn%'
+	);
+
 

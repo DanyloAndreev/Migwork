@@ -38,4 +38,3 @@ class insertRequest
             .' VALUES '.'('.substr(trim($preValues), 0, -1).')' . '';
     }
 }
-

@@ -4,7 +4,7 @@
         <p class="greeting_page_info">Обменивайтесь информацией о работе за границей</p>
     </div>
     <div class="greeting_registration">
-        <form method="post" name="registration" action="../pages/registration.php" class="greeting_registration_form">
+        <form method="post" name="registration" action="../pages/greeting.php" class="greeting_registration_form">
             <br>Email<br>
             <input type="email" name="email" class="greeting_registration_input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
             <br>Имя<br>
@@ -20,7 +20,7 @@
             <p>Дата рождения</p>
             <input type="date" name="birthday" max="2001-12-31" min="1900-01-01" required>
             <br><br>
-            <p><input type="submit" value="Создать аккаунт" class="btn_submit"></p>
+            <p><input type="submit" value="Создать аккаунт" class="btn_submit" name="submit_greeting"></p>
         </form>
     </div>
 </main>
