@@ -34,4 +34,4 @@ $search = array(
 	'%optionEarn%'
 	);
 
-
+$table = array('table' => 'users');

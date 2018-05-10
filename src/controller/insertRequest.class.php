@@ -1,7 +1,7 @@
 <?php
 include_once 'database.class.php';
 
-class insertRequest
+class InsertRequest
 {
     private $params;
     private $values;
@@ -36,5 +36,15 @@ class insertRequest
 
         return 'INSERT INTO '.$this->table.' '.'('.$params.')'
             .' VALUES '.'('.substr(trim($preValues), 0, -1).')' . '';
+    }
+
+    public function params()
+    {
+        return $this->params;
+    }
+
+     public function values()
+    {
+        return $this->values;
     }
 }

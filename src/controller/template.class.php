@@ -91,7 +91,6 @@ class Template
 	public function out()
 	{
 		return $this->data();
-		
 	}
 }
 

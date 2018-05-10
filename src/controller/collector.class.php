@@ -81,6 +81,7 @@ class Collector
     /*return functions*/
     public function where()
     {
+        $this->setWhere();
         return $this->where;
     }
     

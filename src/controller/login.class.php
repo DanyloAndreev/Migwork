@@ -51,10 +51,11 @@ class Login
         
         if (count($row) > 0)
         {
-            return true;
+            echo 'Добро пожаловать на Migwork, '.$row[0]['name'];
         }
         else
         {
+            echo 'Логин или пароль неверные!';
             return false;
         }
     }
