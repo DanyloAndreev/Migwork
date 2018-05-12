@@ -1,6 +1,6 @@
 <header class="head">
     <div class="head_logo">
-        <a href="#">Migwork</a>
+        <a href="../pages/greeting.php">Migwork</a>
     </div>
     <div class="head_login">
         <form method="post" name="login" action="../pages/autorization.php">

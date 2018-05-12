@@ -1,0 +1,698 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is_in",
+				"is_int"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ht",
+				"htmlspecialchars"
+			],
+			[
+				"ab",
+				"about"
+			],
+			[
+				"arr",
+				"arrPos"
+			],
+			[
+				"res",
+				"resultPosition"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"prof",
+				"prof_id"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"conte",
+				"contentOut"
+			],
+			[
+				"gett",
+				"gettype"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"pre",
+				"prepare"
+			],
+			[
+				"fet",
+				"fetchAll"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"posts",
+				"posts"
+			],
+			[
+				"author",
+				"author"
+			],
+			[
+				"a",
+				"author"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"flex",
+				"flex-grow"
+			],
+			[
+				"fl",
+				"flex-direction"
+			],
+			[
+				"cl",
+				"class\tAttr"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"backgro",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"fle",
+				"flex-basis"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"brow",
+				"browserSync"
+			],
+			[
+				"align-",
+				"align-content"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"flex-",
+				"flex-wrap"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"sp",
+				"space-around"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"row",
+				"row-reverse"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"space",
+				"space-between"
+			],
+			[
+				"spac",
+				"space-between"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"bord",
+				"border-style"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"cont",
+				"container-fluid"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border-width"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"New",
+				"NewWriter"
+			],
+			[
+				"Ne",
+				"NewWriter"
+			],
+			[
+				"N",
+				"NewWriter"
+			],
+			[
+				"Test",
+				"TestWriter"
+			],
+			[
+				"test",
+				"testWriter"
+			],
+			[
+				"Te",
+				"TestWriter"
+			],
+			[
+				"str",
+				"strLength"
+			],
+			[
+				"strl",
+				"strlen"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"pri",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/pages/registration.php",
+			"settings":
+			{
+				"buffer_size": 1505,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/controller/collector.class.php",
+			"settings":
+			{
+				"buffer_size": 2462,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 209.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/OpenServer/domains/localhost/migwork",
+		"/C/OpenServer/domains/localhost/migwork/src",
+		"/C/OpenServer/domains/localhost/migwork/src/controller",
+		"/C/OpenServer/domains/localhost/migwork/src/pages",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl"
+	],
+	"file_history":
+	[
+		"/C/openserver/userdata/config/PHP-7-x64_php.ini",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/autorization.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/selectRequest.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/login.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/database.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/config.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/temp.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/insertRequest.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/registration.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/template.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/collector.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/greeting.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/header.tpl",
+		"/C/OpenServer/domains/localhost/b.php",
+		"/C/OpenServer/domains/localhost/localhost/temp/prof.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/tmpl/pagination.tpl",
+		"/C/OpenServer/domains/localhost/migwork/gulpfile.js",
+		"/C/OpenServer/domains/localhost/pdoexample/index.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/tmpl/form_auth.tpl",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/index.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/test.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/section_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/messagecontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/global_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/functions.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/frontpagecontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/articlecontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/article_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/regcontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/mvc.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/regular.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/modules_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/pollcontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/picture1.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/php_html.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/oop_abstr_polimorf.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/inde.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/manage_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/checkvalid_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/dvig/lib/searchcontent_class.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/mvc_controller.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/mvc_model.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/mvc_view.php",
+		"/C/OpenServer/domains/localhost/localhost/rusakov/redirekt.php",
+		"/C/OpenServer/domains/localhost/test.php",
+		"/C/OpenServer/domains/localhost/localhost/task1/new_reg.php",
+		"/C/OpenServer/domains/localhost/localhost/task1/registration.php",
+		"/C/OpenServer/modules/php/PHP-7-x64/php.ini",
+		"/C/OpenServer/modules/php/PHP-5.5-x64/php.ini",
+		"/C/OpenServer/domains/localhost/interpipe/new_aut.php",
+		"/C/OpenServer/domains/localhost/interpipe/db_create.php",
+		"/C/OpenServer/domains/localhost/interpipe/connect.php",
+		"/C/OpenServer/domains/localhost/interpipe/index.php",
+		"/C/OpenServer/domains/localhost/interpipe/css/styles.css",
+		"/C/OpenServer/domains/localhost/interpipe/registration.php",
+		"/C/OpenServer/domains/localhost/interpipe/tpl/dbCreate.tpl",
+		"/C/OpenServer/domains/localhost/interpipe/tpl/header.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/styles.less",
+		"/C/OpenServer/domains/localhost/interpipe/tpl/footer.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/mixin.less",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/vars.less",
+		"/C/OpenServer/domains/localhost/migwork/src/index.php",
+		"/C/OpenServer/domains/localhost/interpipe/index.html",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/reset.less",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/meta.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/css/styles.css",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/index.php",
+		"/C/OpenServer/domains/localhost/task/connect.php",
+		"/C/OpenServer/domains/localhost/task/index.html",
+		"/C/OpenServer/domains/localhost/evergreen.html",
+		"/C/OpenServer/domains/localhost/task/index.php",
+		"/C/OpenServer/domains/localhost/localhost/task/registration.php",
+		"/C/OpenServer/domains/localhost/localhost/task/connect.php",
+		"/C/OpenServer/domains/localhost/localhost/task/db_create.php",
+		"/C/OpenServer/domains/localhost/localhost/task/index.php",
+		"/C/OpenServer/domains/localhost/localhost/evergreen.php",
+		"/C/OpenServer/domains/localhost/localhost/evergreen.html",
+		"/C/OpenServer/domains/localhost/localhost/webbylab.php",
+		"/C/OpenServer/domains/localhost/html5/tags.html",
+		"/C/OpenServer/domains/localhost/Smartgrid/precss/styles.less",
+		"/C/OpenServer/domains/localhost/Smartgrid/FlexBoxLesson1.css",
+		"/C/OpenServer/domains/localhost/test.html",
+		"/C/OpenServer/domains/localhost/work.php",
+		"/C/Program Files/Git/mingw64/share/doc/git-doc/git-push.html",
+		"/C/OpenServer/domains/localhost/migwork/package.json",
+		"/C/OpenServer/domains/localhost/migwork/.git/config",
+		"/C/Program Files/Git/mingw64/share/doc/git-doc/git-rm.html",
+		"/C/OpenServer/domains/localhost/Smartgrid/precss/reset.less",
+		"/C/OpenServer/domains/localhost/Smartgrid/precss/grid.less",
+		"/D/Temp/[Дмитрий Лаврик] Продвинутая вёрстка по сетке smartgrid (2017)/4 урок/grid_lesson4_src/src/precss/reset.less",
+		"/C/OpenServer/domains/localhost/migwork/src/index.html",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/grid.less",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/src/precss/styles.css",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/reset.css",
+		"/C/OpenServer/domains/localhost/html5/package.json",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw4/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw4/index.html",
+		"/D/Temp/[Дмитрий Лаврик] Продвинутая вёрстка по сетке smartgrid (2017)/3 урок/grid_l2_hw/1_Якимчук Р hw-2/style.css",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/1.html",
+		"/C/OpenServer/domains/localhost/migwork/index.html",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/index.html",
+		"/C/OpenServer/domains/localhost/weblayout/tags.html",
+		"/C/OpenServer/domains/localhost/weblayout/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/npminfo",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/gulpfile.js",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/src/index.html",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/package.json",
+		"/C/OpenServer/domains/localhost/Smartgrid/adaptive.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/package-lock.json",
+		"/C/OpenServer/domains/localhost/migwork/test.html",
+		"/C/OpenServer/domains/localhost/migwork/userpage.html",
+		"/C/OpenServer/domains/localhost/migwork/css/style.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/src/css/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project/styles.scss",
+		"/C/OpenServer/domains/localhost/Smartgrid/Project/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/gulpfile.js",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw3/styles.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw1.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw2.css",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw3/index.html",
+		"/D/Temp/[Дмитрий Лаврик] Продвинутая вёрстка по сетке smartgrid (2017)/2 урок/samples/hw1/index.html",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw2.html",
+		"/C/OpenServer/domains/localhost/Smartgrid/hw1.html",
+		"/D/Temp/[Дмитрий Лаврик] Продвинутая вёрстка по сетке smartgrid (2017)/1 урок/grid-lesson1-hw/hw2/styles.css",
+		"/D/Temp/[Дмитрий Лаврик] Продвинутая вёрстка по сетке smartgrid (2017)/1 урок/grid-lesson1-hw/hw2/index.html",
+		"/C/OpenServer/domains/localhost/FlexBoxLesson1.css",
+		"/C/OpenServer/domains/localhost/FlexBoxLesson1.html"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"extensions",
+			"dynamic",
+			"Off"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/pages/registration.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								967,
+								967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/controller/collector.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2348,
+								2348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "migwork.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

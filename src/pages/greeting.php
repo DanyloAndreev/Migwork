@@ -1,10 +1,19 @@
 <?php
 session_start();
 
+if(isset($_POST['login_submit']))
+{
+	header("Location: autorization.php");
+}
+
 if (isset($_POST['submit_greeting']))
 {
+	if($_POST['pass'] == $_POST['pass_confirm'])
+	{
     $_SESSION = $_POST;
     header("Location: registration.php");
+	}
+	else echo 'Пароли не совпадают';
 }
 require_once '../controller/collector.class.php';
 require_once ('../tpl/meta.tpl');

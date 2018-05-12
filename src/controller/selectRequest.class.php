@@ -1,6 +1,4 @@
 <?php
-include_once 'database.class.php';
-
 class selectRequest
 {
     private $table;
@@ -14,7 +12,14 @@ class selectRequest
 
     public function __construct($table, $params, $where, $order, $limit)
     {
-        $this->table = $table;
+        if(is_array($table))
+        {
+            $this->table = $table['table'];
+        }
+        else
+        {
+           $this->table = $table; 
+        }
         foreach ($params as $key => $value)
         {
             $this->params[] = $key;
@@ -37,7 +42,7 @@ class selectRequest
     {
         if(count($this->params) == 0)
         {
-            $params = '*';
+            $params = '*';//если не переданы параметры делаем SELECT ALL
         }
         else
         {

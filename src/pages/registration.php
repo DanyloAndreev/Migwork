@@ -1,6 +1,6 @@
 <?php
 session_start();
-ini_set('display_errors','Off');
+ini_set('display_errors','off');
 include_once '../controller/config.php';
 include_once '../controller/insertRequest.class.php';
 include_once '../controller/config.php';
@@ -23,28 +23,38 @@ if(isset($_POST['submit_registration']))
     $form = array_merge($_SESSION, $_POST);//данные с предыдущей формы + данные с текущей формы
     $collector = new Collector($form);//передаем введенные данные в Collector
     $collector->setParams();
-}
 
-$insertRequest = new InsertRequest($collector->params(), $table);
+    $insertRequest = new InsertRequest($collector->params(), $table);
 
 
-try
-{
-	$db = DataBase::getDB();
-	$db->beginTransaction();
-	$db->query($insertRequest->request());
+	$dbReg = DataBase::getDB();
+	$dbReg->beginTransaction();
+	$dbReg->query($insertRequest->request());
 	for ($i = 0; $i < count($insertRequest->params()); $i++)
 	{
-	    $db->bind(':'.$insertRequest->params()[$i], $insertRequest->values()[$i]);
+	    $dbReg->bind(':'.$insertRequest->params()[$i], $insertRequest->values()[$i]);
 	}
-	$db->execute();
+	if($dbReg->execute())
+	{
+		$structure = '../media/img/'.$dbReg->lastInsertId().'';//создаем папку для изображений пользователя
+		if (!mkdir($structure, 0777, true))
+		{
+		    die('Не удалось создать директории...');
+		}
+		else
+		{
+			copy($_FILES['user_foto']['tmp_name'], '../media/img/'.$dbReg->lastInsertId().'/'.$dbReg->lastInsertId().'_original.jpg');//копируем фото в папку пользователя
+		}
+		
+		$dbReg->endTransaction();
+		// $_SESSION['pass'] = md5($_SESSION['pass']);
+		$_SESSION['pass_confirm'] = null;
+		echo '<script>window.location = "../pages/main.php"</script>';
+	}
+	else
+	{
+		$dbReg->cancelTransaction();
+		echo 'Что то пошло не так!, '.$insertRequest->values()[3];
+		exit();
+	}
 }
-catch (PDOException $e)
-{
-	$db->cancelTransaction();
-	echo 'Что то пошло не так, '.$insertRequest->values()[3]. '  '.$e->getCode();
-	exit();
-}
-$db->endTransaction();
-echo 'Успешная регистрация, '.$insertRequest->values()[3];
-echo $db->lastInsertId();

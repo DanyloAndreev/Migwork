@@ -18,7 +18,7 @@ class Collector
         /*формирует WHERE для SQL-запроса для авторизации*/
         $form = $this->form;
         $this->where['condition'] = '=';//email = email
-        $this->where['email'] = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+        $this->where['email'] = filter_var($form['email'], FILTER_VALIDATE_EMAIL);
         
         if (is_string($form['pass']))
         {
@@ -63,6 +63,9 @@ class Collector
 
         //validate about
         $this->params['about'] = $this->validate($form['about']);
+
+        //Registration date
+        $this->params['reg_date'] = date("Y-m-d H:i:s");
     }
     
     /*Helpful functions*/
