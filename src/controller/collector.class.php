@@ -34,6 +34,12 @@ class Collector
         //Validate email
         $this->params['email'] = filter_var($form['email'], FILTER_VALIDATE_EMAIL);
 
+        //validate tel        
+        if(preg_match("/[0-9]{10}/", $form['tel']))
+        {
+            $this->params['tel'] = '+38'.$form['tel'];
+        }
+
         //validate password
         if($this->validate($form['pass']) === $this->validate($form['pass_confirm']))
         {

@@ -13,5 +13,6 @@ $collector = new Collector($_POST);//передаем введенные дан�
 $login = new Login($collector->where());//передаем параметры в класс авторизации
 if($login->login())
 {
+	$_SESSION = $login->userDbData()[0];
 	header("Location: main.php");
-}
+ }

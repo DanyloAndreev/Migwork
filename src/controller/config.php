@@ -27,11 +27,5 @@ $paramsEarn = array(
 	'amount',
 	'Earn'
 	);
-$search = array(
-	'%optionNativeCountry%',
-	'%optionWorkAt%',
-	'%optionPosition%',
-	'%optionEarn%'
-	);
 
 $table = array('table' => 'users');

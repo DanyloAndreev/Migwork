@@ -15,6 +15,7 @@ class Login
     private $order = TBL_ORDER;
     private $limit = TBL_LIMIT;
     private $where;
+    private $row;
     
     public function __construct($where)
     {
@@ -47,17 +48,22 @@ class Login
             $this->db->bind(':'.$par[$i], $val[$i]);
         }
         
-        $row = $this->db->resultset();//возвращает в виде ассоциативного массива
+        $this->row = $this->db->resultset();//возвращает в виде ассоциативного массива
         
-        if (count($row) > 0)
+        if (count($this->row) > 0)
         {
             // echo 'Добро пожаловать на Migwork, '.$row[0]['name'];
             return true;
         }
         else
         {
-            echo 'Логин или пароль неверные!';
+            //echo 'Логин или пароль неверные!';
             return false;
         }
+    }
+
+    public function userDbData ()
+    {
+        return $this->row;
     }
 }

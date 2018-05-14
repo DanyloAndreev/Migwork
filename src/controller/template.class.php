@@ -1,7 +1,7 @@
 <?php
 include_once 'database.class.php';
 
-class Template
+class TemplateHandler
 {
 	private $db;
 	private $tpl;
@@ -12,35 +12,31 @@ class Template
 	private $prepareCountry;
 	private $preparePosition;
 	private $prepareEarn;
-	private $search;
-	private $paramsCountry;
-	private $paramsPosition;
-	private $paramsEarn;
+	private $resultCountry;
 
 
-	public function __construct($paramsCountry, $paramsPosition, $paramsEarn, $search)
+	public function __construct()
 	{
 		$this->db = DataBase::getDB();
-		$this->tpl = file_get_contents('../tpl/registration.tpl');
-		$this->paramsCountry = $paramsCountry;
-		$this->paramsPosition = $paramsPosition;
-		$this->paramsEarn = $paramsEarn;
-		$this->search = $search;
+		
 	}
 
-	private function data()
+	/*Вывод select на странице регистрации из БД*/
+	public function selectRegData($paramsCountry, $paramsPosition = [], $paramsEarn = [])
 	{
-		$paramsCountry = $this->paramsCountry;
-		$paramsPosition = $this->paramsPosition;
-		$paramsEarn = $this->paramsEarn;
-		$search = $this->search;
+		$this->tpl = file_get_contents('../tpl/registration.tpl');
 		$this->requestCountry = "SELECT $paramsCountry[0], $paramsCountry[1] FROM $paramsCountry[2] ORDER BY $paramsCountry[0] ASC";
 		$this->requestPosition = "SELECT $paramsPosition[0], $paramsPosition[1] FROM $paramsPosition[2] ORDER BY $paramsPosition[0] ASC";
 		$this->requestEarn = "SELECT $paramsEarn[0], $paramsEarn[1] FROM $paramsEarn[2] ORDER BY $paramsEarn[0] ASC";
-		$this->search = $search;
+		$this->search = array(
+			'%optionNativeCountry%',
+			'%optionWorkAt%',
+			'%optionPosition%',
+			'%optionEarn%'
+			);
 		//для страны
 		$this->db->query($this->requestCountry);
-		$resultCountry = $this->db->resultset();//получаем данные из БД
+		$this->resultCountry = $this->db->resultset();//получаем данные из БД
 		//для профессий
 		$this->db->query($this->requestPosition);
 		$resultPosition = $this->db->resultset();
@@ -48,7 +44,7 @@ class Template
 		$this->db->query($this->requestEarn);
 		$resultEarn = $this->db->resultset();
 
-		foreach ($resultCountry as $val)
+		foreach ($this->resultCountry as $val)
 		{
 			$arr[$val['country_id']] = $val['title_ru'];	
 		}
@@ -85,12 +81,59 @@ class Template
 			$this->prepareEarn
 		);
 
-		return $this->content = str_replace($this->search, $replace, $this->tpl);//заменяем в шаблоне
+		$this->content = str_replace($this->search, $replace, $this->tpl);//заменяем в шаблоне
+	}
+
+	public function showInfoBlock($session, $paramsCountry, $paramsEarn, $paramsPosition)
+	{
+		$tpl = file_get_contents('../tpl/infoBlock.tpl');
+
+		//данные о стране происхождения пользователя
+		$nativeCountry = "SELECT $paramsCountry[0], $paramsCountry[1] FROM $paramsCountry[2] WHERE country_id=$session[native_country] ORDER BY $paramsCountry[0] ASC";
+		$this->db->query($nativeCountry);
+		$resultNativeCountry = $this->db->resultset();//получаем данные из БД
+		//данные о стране работы пользователя
+		$workAt = "SELECT $paramsCountry[0], $paramsCountry[1] FROM $paramsCountry[2] WHERE country_id=$session[work_at] ORDER BY $paramsCountry[0] ASC";
+		$this->db->query($workAt);
+		$resultWorkAt = $this->db->resultset();//получаем данные из БД
+		//данные о заработке пользователя
+		$earn = "SELECT $paramsEarn[0], $paramsEarn[1] FROM $paramsEarn[2] WHERE id=$session[earn] ORDER BY $paramsEarn[0] ASC";
+		$this->db->query($earn);
+		$resultEarn = $this->db->resultset();//получаем данные из БД
+		//данные о професси пользователя
+		$position = "SELECT $paramsPosition[0], $paramsPosition[1] FROM $paramsPosition[2] WHERE prof_id=$session[position] ORDER BY $paramsPosition[0] ASC";
+		$this->db->query($position);
+		$resultPosition = $this->db->resultset();//получаем данные из БД
+
+		$search = array(
+			'%avatar%',
+			'%surname%',
+			'%name%',
+			'%email%',
+			'%tel%',
+			'%birthday%',
+			'%native_country%',
+			'%work_at%',
+			'%earn%',
+			'%position%');
+		$replace = array(
+			'../media/img/'.$session['id'].'/'.$session['id'].'_original.jpg',
+			$session['surname'],
+			$session['name'],
+			$session['email'],
+			$session['tel'],
+			$session['birthday'],
+			$resultNativeCountry[0][title_ru],
+			$resultWorkAt[0][title_ru],
+			$resultEarn[0][amount],
+			$resultPosition[0][prof_name]);
+		$result = str_replace($search, $replace, $tpl);
+		return $result;
 	}
 
 	public function out()
 	{
-		return $this->data();
+		return $this->content;
 	}
 }
 

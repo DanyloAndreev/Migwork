@@ -12,7 +12,8 @@ require_once ('../tpl/meta.tpl');
 require_once ('../tpl/header.tpl');
 
 require_once ('../controller/template.class.php');
-$template = new Template($paramsCountry, $paramsPosition, $paramsEarn, $search);//параметры из конфига
+$template = new TemplateHandler();//параметры из конфига
+$template->selectRegData($paramsCountry, $paramsPosition, $paramsEarn);
 echo $template->out(); // вывод параметров из БД
 
 require_once ('../tpl/footer.tpl');
@@ -23,6 +24,7 @@ if(isset($_POST['submit_registration']))
     $form = array_merge($_SESSION, $_POST);//данные с предыдущей формы + данные с текущей формы
     $collector = new Collector($form);//передаем введенные данные в Collector
     $collector->setParams();
+    print_r($collector->params());
 
     $insertRequest = new InsertRequest($collector->params(), $table);
 

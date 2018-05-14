@@ -13,7 +13,7 @@ if (isset($_POST['submit_greeting']))
     $_SESSION = $_POST;
     header("Location: registration.php");
 	}
-	else echo 'Пароли не совпадают';
+	//else echo 'Пароли не совпадают';
 }
 require_once '../controller/collector.class.php';
 require_once ('../tpl/meta.tpl');

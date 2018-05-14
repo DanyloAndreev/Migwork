@@ -1,38 +1,24 @@
 <?php
 session_start();
+
+ini_set('display_errors','On');
 include_once '../controller/config.php';
 include_once '../controller/database.class.php';
 require_once '../controller/collector.class.php';
 include_once '../controller/selectRequest.class.php';
-/*Проверка наличия записи в БД по email и pass*/
-$db = DataBase::getDB();
-$collector = new Collector($_SESSION);
+include_once '../controller/template.class.php';
 
-$order = TBL_ORDER;
-$limit = TBL_LIMIT;
-$selectRequest = new selectRequest($table, $params = [], $collector->where(), $order, $limit);
-
-$db->beginTransaction();
-$db->query($selectRequest->single());
-foreach ($collector->where() as $key => $value)
-    {
-        $par[] = $key;
-        $val[] = $value;
-    }
-    for ($i = 1; $i < count($par); $i++)
-    {
-        $db->bind(':'.$par[$i], $val[$i]);
-    }
-        
-$row = $db->resultset();
-print_r($row);
-$db->endTransaction();
+/*В $_SESSION все данные с БД о пользователе с соответствующим логином и паролем*/
 
 
 require_once ('../tpl/meta.tpl');
 require_once ('../tpl/header_main.tpl');
 require_once ('../tpl/main.tpl');
-require_once ('../tpl/avatar.tpl');
+
+/*Аватар с диска по id*/
+$template = new TemplateHandler();
+echo $template->showInfoBlock($_SESSION, $paramsCountry, $paramsEarn, $paramsPosition);
+
 require_once ('../tpl/mainEnd.tpl');
 
 require_once ('../tpl/end.tpl');
