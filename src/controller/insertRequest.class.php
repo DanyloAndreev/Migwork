@@ -7,8 +7,7 @@ class InsertRequest
     private $values;
     private $table;
 
-    //получить в аргумент массив(первая пара имя таблицы, остальные пары имя столбца
-    // +значение
+    //получить в аргумент массив(первый аргумент имя столбца в таблице + значение, второй таблица + имя таблицы
     public function __construct($input, $table)
     {
         foreach ($input as $key => $value)

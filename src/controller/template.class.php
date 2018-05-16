@@ -1,4 +1,5 @@
 <?php
+/*Обработчик всех шаблонов, с подстановкой данных из БД*/
 include_once 'database.class.php';
 
 class TemplateHandler
@@ -86,7 +87,7 @@ class TemplateHandler
 
 	public function showInfoBlock($session, $paramsCountry, $paramsEarn, $paramsPosition)
 	{
-		$tpl = file_get_contents('../tpl/infoBlock.tpl');
+		$tpl = file_get_contents('../tpl/mainInfoBlock.tpl');
 
 		//данные о стране происхождения пользователя
 		$nativeCountry = "SELECT $paramsCountry[0], $paramsCountry[1] FROM $paramsCountry[2] WHERE country_id=$session[native_country] ORDER BY $paramsCountry[0] ASC";
@@ -128,7 +129,13 @@ class TemplateHandler
 			$resultEarn[0][amount],
 			$resultPosition[0][prof_name]);
 		$result = str_replace($search, $replace, $tpl);
+
 		return $result;
+	}
+
+	public function showPost()
+	{
+		
 	}
 
 	public function out()

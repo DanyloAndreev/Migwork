@@ -22,9 +22,8 @@ require_once ('../tpl/end.tpl');
 if(isset($_POST['submit_registration']))
 {
     $form = array_merge($_SESSION, $_POST);//данные с предыдущей формы + данные с текущей формы
-    $collector = new Collector($form);//передаем введенные данные в Collector
+    $collector = new Collector($form);
     $collector->setParams();
-    print_r($collector->params());
 
     $insertRequest = new InsertRequest($collector->params(), $table);
 
@@ -49,7 +48,6 @@ if(isset($_POST['submit_registration']))
 		}
 		
 		$dbReg->endTransaction();
-		// $_SESSION['pass'] = md5($_SESSION['pass']);
 		$_SESSION['pass_confirm'] = null;
 		echo '<script>window.location = "../pages/main.php"</script>';
 	}

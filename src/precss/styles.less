@@ -262,7 +262,8 @@ a {
       min-height: 320px;
       box-shadow: 0 0 10px @text_color;
       background-color: #ffffff;
-      width: 98%;
+      width: 97%;
+      padding: 2px;
       margin: 5px auto;
 
       &__author {
@@ -341,6 +342,31 @@ a {
           }
         }
       }
+    }
+
+    .publish {
+      box-shadow: 0 0 10px @text_color;
+      background-color: #ffffff;
+      margin: 5px auto;
+      width: 97%;
+      padding: 2px;
+      font-size: 2.3vh;
+      display: flex;
+      flex-wrap: nowrap;
+
+      &_btn {
+        margin: auto 5px;
+      }
+      
+      &_title {
+        margin: auto 5px;
+      }
+    }
+
+    .addPost {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .footerMenu {

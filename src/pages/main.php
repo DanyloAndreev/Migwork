@@ -15,9 +15,12 @@ require_once ('../tpl/meta.tpl');
 require_once ('../tpl/header_main.tpl');
 require_once ('../tpl/main.tpl');
 
-/*Аватар с диска по id*/
+/*InfoBlock с диска по id*/
 $template = new TemplateHandler();
 echo $template->showInfoBlock($_SESSION, $paramsCountry, $paramsEarn, $paramsPosition);
+
+require_once ('../tpl/mainPublish.tpl');
+require_once ('../tpl/mainPost.tpl');
 
 require_once ('../tpl/mainEnd.tpl');
 
