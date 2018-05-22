@@ -33,6 +33,15 @@ if (isset($_POST['submit_addPost']))
 	{
 		if(!empty($_FILES['postImg']['tmp_name']))
 		{
+			// $exif = exif_read_data($_FILES['postImg']['tmp_name'], 0, true);
+			// 	echo "test2.jpg:<br />\n";
+			// 	foreach ($exif as $key => $section) {
+			// 	    foreach ($section as $name => $val) {
+			// 	        echo "$key.$name: $val<br />\n";
+			// 	    }
+}
+		
+
 			copy($_FILES['postImg']['tmp_name'], '../media/img/'.$_SESSION['id'].'/'.$db->lastInsertId().'_post.jpg');
 		}
 	}
@@ -40,7 +49,6 @@ if (isset($_POST['submit_addPost']))
 	{
 		$db->cancelTransaction();
 		echo 'Что то пошло не так!';
-		exit();
 	}
 
 	$db->endTransaction();

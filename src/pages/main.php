@@ -20,7 +20,15 @@ $template = new TemplateHandler();
 echo $template->showInfoBlock($_SESSION, $paramsCountry, $paramsEarn, $paramsPosition);
 
 require_once ('../tpl/mainPublish.tpl');
-require_once ('../tpl/mainPost.tpl');
+$template->showPost($_SESSION);
+
+
+
+for ($i=0; $i < count($template->out()); $i++) { 
+	echo $template->out()[$i];
+}
+
+echo '<br><br>';
 
 require_once ('../tpl/mainEnd.tpl');
 

@@ -40,7 +40,7 @@ if(isset($_POST['submit_registration']))
 		$structure = '../media/img/'.$dbReg->lastInsertId().'';//создаем папку для изображений пользователя
 		if (!mkdir($structure, 0777, true))
 		{
-		    die('Не удалось создать директории...');
+		    echo 'Не удалось создать директории...';
 		}
 		else
 		{

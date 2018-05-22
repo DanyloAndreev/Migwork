@@ -133,9 +133,39 @@ class TemplateHandler
 		return $result;
 	}
 
-	public function showPost()
+	public function showPost($session)
 	{
+		$tpl = file_get_contents('../tpl/mainPost.tpl');
+
+		$postsRequest = "SELECT * FROM POSTS WHERE id_user=$session[id]";
+		$this->db->query($postsRequest);
+		$resultPosts = $this->db->resultset();
 		
+		
+		for($i = 0; $i < count($resultPosts); $i++)
+		{
+				$search = array(
+					'%postDate%',
+					'%postImg%',
+					'%postText%',
+					'%postLike%',
+					'%postComments%',
+					'%postPublisher%',
+					'%postPublisherAva%');
+
+				$replace = array(
+					$resultPosts[$i]['time'],
+					'../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id'].'_post.jpg',
+					$resultPosts[$i]['text'],
+					$resultPosts[$i]['post_like'],
+					$resultPosts[$i]['comments'],
+					$session['name'].' '.$session['surname'],
+					'../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id_user'].'_original.jpg');
+				
+				$result[$i] = str_replace($search, $replace, $tpl);
+		}
+
+		$this->content = $result;
 	}
 
 	public function out()
