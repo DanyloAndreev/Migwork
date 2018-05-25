@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-ini_set('display_errors','On');
-include_once '../controller/config.php';
-include_once '../controller/database.class.php';
+var_dump($_SESSION);
+ini_set('display_errors','Off');
+require_once '../controller/config.php';
+require_once '../controller/database.class.php';
 require_once '../controller/collector.class.php';
-include_once '../controller/selectRequest.class.php';
-include_once '../controller/template.class.php';
+require_once '../controller/selectRequest.class.php';
+require_once '../controller/template.class.php';
 
 /*В $_SESSION все данные с БД о пользователе с соответствующим логином и паролем*/
 
@@ -24,7 +25,7 @@ $template->showPost($_SESSION);
 
 
 
-for ($i=0; $i < count($template->out()); $i++) { 
+for ($i = 0; $i < count($template->out()); $i++) { 
 	echo $template->out()[$i];
 }
 

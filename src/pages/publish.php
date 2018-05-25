@@ -1,10 +1,14 @@
 <?php
+/*
+Публикация нового поста на странице пользователя
+*/
 session_start();
 
 ini_set('display_errors','On');
 
-include_once '../controller/insertRequest.class.php';
+require_once '../controller/insertRequest.class.php';
 require_once '../controller/collector.class.php';
+require_once '../controller/imgHandler.class.php';
 
 
 
@@ -33,15 +37,8 @@ if (isset($_POST['submit_addPost']))
 	{
 		if(!empty($_FILES['postImg']['tmp_name']))
 		{
-			// $exif = exif_read_data($_FILES['postImg']['tmp_name'], 0, true);
-			// 	echo "test2.jpg:<br />\n";
-			// 	foreach ($exif as $key => $section) {
-			// 	    foreach ($section as $name => $val) {
-			// 	        echo "$key.$name: $val<br />\n";
-			// 	    }
-}
-		
-
+			$img = new imgHandler($_FILES['postImg']['tmp_name'], 1024, 768);
+			$img->newImg();
 			copy($_FILES['postImg']['tmp_name'], '../media/img/'.$_SESSION['id'].'/'.$db->lastInsertId().'_post.jpg');
 		}
 	}
@@ -52,6 +49,7 @@ if (isset($_POST['submit_addPost']))
 	}
 
 	$db->endTransaction();
+	echo '<script>window.location = "../pages/main.php"</script>';
 }
 
 

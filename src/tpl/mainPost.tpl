@@ -11,7 +11,7 @@
             <img src="../images/icons/menu.png">
         </div>
     </div>
-    <div class="post__picture"><img src="%postImg%"></div>
+    %postImg%
     <div class="post__text">%postText%</div>
     <div class="post__stats">
         <div class="post__stats_likes">

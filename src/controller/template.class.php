@@ -1,6 +1,6 @@
 <?php
 /*Обработчик всех шаблонов, с подстановкой данных из БД*/
-include_once 'database.class.php';
+require_once 'database.class.php';
 
 class TemplateHandler
 {
@@ -29,6 +29,7 @@ class TemplateHandler
 		$this->requestCountry = "SELECT $paramsCountry[0], $paramsCountry[1] FROM $paramsCountry[2] ORDER BY $paramsCountry[0] ASC";
 		$this->requestPosition = "SELECT $paramsPosition[0], $paramsPosition[1] FROM $paramsPosition[2] ORDER BY $paramsPosition[0] ASC";
 		$this->requestEarn = "SELECT $paramsEarn[0], $paramsEarn[1] FROM $paramsEarn[2] ORDER BY $paramsEarn[0] ASC";
+		
 		$this->search = array(
 			'%optionNativeCountry%',
 			'%optionWorkAt%',
@@ -85,7 +86,7 @@ class TemplateHandler
 		$this->content = str_replace($this->search, $replace, $this->tpl);//заменяем в шаблоне
 	}
 
-	public function showInfoBlock($session, $paramsCountry, $paramsEarn, $paramsPosition)
+	public function showInfoBlock($session, $paramsCountry = '', $paramsEarn = '', $paramsPosition = '')
 	{
 		$tpl = file_get_contents('../tpl/mainInfoBlock.tpl');
 
@@ -137,32 +138,42 @@ class TemplateHandler
 	{
 		$tpl = file_get_contents('../tpl/mainPost.tpl');
 
-		$postsRequest = "SELECT * FROM POSTS WHERE id_user=$session[id]";
+		$postsRequest = "SELECT * FROM POSTS WHERE id_user=$session[id] ORDER BY time DESC";
 		$this->db->query($postsRequest);
 		$resultPosts = $this->db->resultset();
 		
 		
 		for($i = 0; $i < count($resultPosts); $i++)
 		{
-				$search = array(
-					'%postDate%',
-					'%postImg%',
-					'%postText%',
-					'%postLike%',
-					'%postComments%',
-					'%postPublisher%',
-					'%postPublisherAva%');
+			//Если нет фото поста, выводим пустую строку
+			if (file_exists('../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id'].'_post.jpg'))
+			{
+				$postImg = '<div class="post__picture"><img src="../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id'].'_post.jpg"></div>';
+			}
+			else
+			{
+				$postImg = '';
+			}
 
-				$replace = array(
-					$resultPosts[$i]['time'],
-					'../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id'].'_post.jpg',
-					$resultPosts[$i]['text'],
-					$resultPosts[$i]['post_like'],
-					$resultPosts[$i]['comments'],
-					$session['name'].' '.$session['surname'],
-					'../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id_user'].'_original.jpg');
-				
-				$result[$i] = str_replace($search, $replace, $tpl);
+			$search = array(
+				'%postDate%',
+				'%postImg%',
+				'%postText%',
+				'%postLike%',
+				'%postComments%',
+				'%postPublisher%',
+				'%postPublisherAva%');
+
+			$replace = array(
+				$resultPosts[$i]['time'],
+				$postImg,
+				$resultPosts[$i]['text'],
+				$resultPosts[$i]['post_like'],
+				$resultPosts[$i]['comments'],
+				$session['name'].' '.$session['surname'],
+				'../media/img/'.$resultPosts[$i]['id_user'].'/'.$resultPosts[$i]['id_user'].'_original.jpg');
+			
+			$result[$i] = str_replace($search, $replace, $tpl);
 		}
 
 		$this->content = $result;

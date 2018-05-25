@@ -1,15 +1,17 @@
 <?php
 session_start();
 ini_set('display_errors','off');
-include_once '../controller/config.php';
-include_once '../controller/insertRequest.class.php';
-include_once '../controller/config.php';
-include_once '../controller/database.class.php';
+require_once '../controller/config.php';
+require_once '../controller/insertRequest.class.php';
+require_once '../controller/config.php';
+require_once '../controller/database.class.php';
+require_once '../controller/imgHandler.class.php';
 
 
 require_once '../controller/collector.class.php';
 require_once ('../tpl/meta.tpl');
 require_once ('../tpl/header.tpl');
+
 
 require_once ('../controller/template.class.php');
 $template = new TemplateHandler();//параметры из конфига
@@ -37,24 +39,27 @@ if(isset($_POST['submit_registration']))
 	}
 	if($dbReg->execute())
 	{
-		$structure = '../media/img/'.$dbReg->lastInsertId().'';//создаем папку для изображений пользователя
+		$lastInsertId = $dbReg->lastInsertId();
+		$structure = '../media/img/'.$lastInsertId.'';//создаем папку для изображений пользователя
 		if (!mkdir($structure, 0777, true))
 		{
 		    echo 'Не удалось создать директории...';
 		}
 		else
 		{
-			copy($_FILES['user_foto']['tmp_name'], '../media/img/'.$dbReg->lastInsertId().'/'.$dbReg->lastInsertId().'_original.jpg');//копируем фото в папку пользователя
+			$img = new imgHandler($_FILES['postImg']['tmp_name'], 1024, 768);
+			$img->newImg();
+			copy($_FILES['user_foto']['tmp_name'], '../media/img/'.$lastInsertId.'/'.$lastInsertId.'_original.jpg');//копируем фото в папку пользователя
 		}
 		
 		$dbReg->endTransaction();
 		$_SESSION['pass_confirm'] = null;
+		$_SESSION['id'] = $lastInsertId;
 		echo '<script>window.location = "../pages/main.php"</script>';
 	}
 	else
 	{
 		$dbReg->cancelTransaction();
 		echo 'Что то пошло не так!, '.$insertRequest->values()[3];
-		exit();
 	}
 }
