@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-var_dump($_SESSION);
-ini_set('display_errors','Off');
+
+ini_set('display_errors','On');
 require_once '../controller/config.php';
 require_once '../controller/database.class.php';
 require_once '../controller/collector.class.php';

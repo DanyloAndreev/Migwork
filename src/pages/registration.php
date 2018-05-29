@@ -1,5 +1,7 @@
 <?php
+ob_start();
 session_start();
+
 ini_set('display_errors','off');
 require_once '../controller/config.php';
 require_once '../controller/insertRequest.class.php';
@@ -54,8 +56,9 @@ if(isset($_POST['submit_registration']))
 		
 		$dbReg->endTransaction();
 		$_SESSION['pass_confirm'] = null;
-		$_SESSION['id'] = $lastInsertId;
-		echo '<script>window.location = "../pages/main.php"</script>';
+		
+		header("Location: autorization.php");
+
 	}
 	else
 	{
@@ -63,3 +66,4 @@ if(isset($_POST['submit_registration']))
 		echo 'Что то пошло не так!, '.$insertRequest->values()[3];
 	}
 }
+ob_end_flush();

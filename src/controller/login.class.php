@@ -52,7 +52,7 @@ class Login
         
         if (count($this->row) > 0)
         {
-            // echo 'Добро пожаловать на Migwork, '.$row[0]['name'];
+            //echo 'Добро пожаловать на Migwork, '.$row[0]['name'];
             return true;
         }
         else
