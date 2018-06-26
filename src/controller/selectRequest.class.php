@@ -37,7 +37,7 @@ class selectRequest
         }
         $this->limit = $limit;
     }
-
+    /*формирует SQL запрос*/
     public function single()
     {
         if(count($this->params) == 0)

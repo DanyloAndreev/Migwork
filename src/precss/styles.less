@@ -194,6 +194,56 @@ a {
     }
   }
 
+  .friends {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+
+    &_list {
+
+      &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 97%;
+        background-color: @text_color;
+        margin-bottom: 1%;
+
+
+        .item_foto {
+          flex-basis: 54%;
+          margin-right: 1%;
+        }
+
+      .item_info {
+
+        a {
+          color: @blue_color;
+          font-weight: 700;
+          font-size: 18px;
+         }
+      }
+
+      .avatar__buttons {
+
+        &_message, &_addFriend, &_mail, &_call {
+          .btn_confirm();
+        }
+      }   
+
+      
+    }
+  }
+
+    &_options{
+      width: 21%;
+      margin: 1%;
+      padding: 1%;
+      background-color: yellow;
+    }
+  }
+
     .info {
       box-shadow: 0 0 10px @text_color;
       width: 97%;
@@ -384,8 +434,9 @@ a {
       box-shadow: 0 0 10px @text_color;
       padding: 3px;
       position: fixed;
+      left: 15%;
       bottom: 0;
-      width: 100%;
+      width: 70%;
 
       &__home, &__profile, &__messages, &__groups, &__search {
         .btmMenu ();

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"align",
+				"align-self"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"fle",
+				"flex-shrink"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"sp",
+				"space-between"
+			],
+			[
+				"flex",
+				"flex-basis"
+			],
+			[
+				"ro",
+				"row"
+			],
+			[
+				"new",
+				"newPath"
+			],
+			[
+				"img",
+				"imgHandler"
+			],
+			[
+				"pos",
+				"postsRequest"
+			],
+			[
 				"_",
 				"_SESSION"
 			],
@@ -144,10 +184,6 @@
 				"padding"
 			],
 			[
-				"flex",
-				"flex-grow"
-			],
-			[
 				"fl",
 				"flex-direction"
 			],
@@ -166,10 +202,6 @@
 			[
 				"bac",
 				"background-size"
-			],
-			[
-				"fle",
-				"flex-basis"
 			],
 			[
 				"ba",
@@ -214,14 +246,6 @@
 			[
 				"flex-",
 				"flex-wrap"
-			],
-			[
-				"align",
-				"align-items"
-			],
-			[
-				"sp",
-				"space-around"
 			],
 			[
 				"row",
@@ -336,16 +360,6 @@
 	"buffers":
 	[
 		{
-			"file": "src/pages/publish.php",
-			"settings":
-			{
-				"buffer_size": 1178,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "<?php"
-			}
-		},
-		{
 			"file": "src/controller/collector.class.php",
 			"settings":
 			{
@@ -355,28 +369,37 @@
 			}
 		},
 		{
-			"file": "src/controller/insertRequest.class.php",
+			"file": "src/tpl/friendsItem.tpl",
 			"settings":
 			{
-				"buffer_size": 1120,
+				"buffer_size": 761,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/pages/registration.php",
+			"file": "src/precss/styles.less",
 			"settings":
 			{
-				"buffer_size": 1840,
+				"buffer_size": 8201,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/tpl/mainAddPost.tpl",
+			"file": "src/controller/selectRequest.class.php",
 			"settings":
 			{
-				"buffer_size": 454,
+				"buffer_size": 1857,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/pages/friends.php",
+			"settings":
+			{
+				"buffer_size": 593,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -424,30 +447,37 @@
 		"/C/OpenServer/domains/localhost/migwork/src/media",
 		"/C/OpenServer/domains/localhost/migwork/src/media/img",
 		"/C/OpenServer/domains/localhost/migwork/src/media/img/38",
-		"/C/OpenServer/domains/localhost/migwork/src/media/img/52",
 		"/C/OpenServer/domains/localhost/migwork/src/pages",
-		"/C/OpenServer/domains/localhost/migwork/src/precss"
+		"/C/OpenServer/domains/localhost/migwork/src/precss",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl"
 	],
 	"file_history":
 	[
-		"/C/OpenServer/domains/localhost/migwork/src/pages/main.php",
-		"/C/OpenServer/domains/localhost/migwork/src/controller/template.class.php",
-		"/C/OpenServer/domains/localhost/migwork/src/precss/styles.less",
-		"/C/OpenServer/domains/localhost/migwork/src/tpl/registration.tpl",
 		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainEnd.tpl",
-		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainPost.tpl",
-		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainPublish.tpl",
-		"/C/OpenServer/domains/localhost/migwork/src/tpl/infoBlock.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/friendsStart.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/friendsEnd.tpl",
+		"/C/OpenServer/domains/localhost/Smartgrid/FlexBoxLesson1.css",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainInfoBlock.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/login.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/autorization.php",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/template.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/main.php",
 		"/C/OpenServer/domains/localhost/migwork/src/pages/registration.php",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainAddPost.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/pages/publish.php",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainPost.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/imgHandler.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/precss/styles.less",
+		"/C/OpenServer/domains/localhost/migwork/src/controller/insertRequest.class.php",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/mainPublish.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/registration.tpl",
+		"/C/OpenServer/domains/localhost/migwork/src/tpl/infoBlock.tpl",
 		"/C/OpenServer/domains/localhost/migwork/src/controller/collector.class.php",
 		"/C/OpenServer/domains/localhost/migwork/src/controller/config.php",
 		"/C/OpenServer/domains/localhost/migwork/src/media/imgphp2103.jpeg",
 		"/C/OpenServer/domains/localhost/t.php",
-		"/C/OpenServer/domains/localhost/migwork/src/controller/insertRequest.class.php",
 		"/C/OpenServer/domains/localhost/migwork/src/pages/greeting.php",
 		"/C/OpenServer/domains/localhost/migwork/src/tpl/greeting.tpl",
-		"/C/OpenServer/domains/localhost/migwork/src/controller/login.class.php",
-		"/C/OpenServer/domains/localhost/migwork/src/pages/autorization.php",
 		"/C/OpenServer/domains/localhost/migwork/src/tpl/main.tpl",
 		"/C/OpenServer/domains/localhost/migwork/src/controller/selectRequest.class.php",
 		"/C/OpenServer/domains/localhost/migwork/src/controller/database.class.php",
@@ -524,7 +554,6 @@
 		"/C/OpenServer/domains/localhost/localhost/webbylab.php",
 		"/C/OpenServer/domains/localhost/html5/tags.html",
 		"/C/OpenServer/domains/localhost/Smartgrid/precss/styles.less",
-		"/C/OpenServer/domains/localhost/Smartgrid/FlexBoxLesson1.css",
 		"/C/OpenServer/domains/localhost/test.html",
 		"/C/OpenServer/domains/localhost/work.php",
 		"/C/Program Files/Git/mingw64/share/doc/git-doc/git-push.html",
@@ -551,17 +580,11 @@
 		"/C/OpenServer/domains/localhost/Smartgrid/npminfo",
 		"/C/OpenServer/domains/localhost/Smartgrid/Project2/gulpfile.js",
 		"/C/OpenServer/domains/localhost/Smartgrid/Project2/src/index.html",
-		"/C/OpenServer/domains/localhost/Smartgrid/Project2/package.json",
-		"/C/OpenServer/domains/localhost/Smartgrid/adaptive.css",
-		"/C/OpenServer/domains/localhost/Smartgrid/Project2/package-lock.json",
-		"/C/OpenServer/domains/localhost/migwork/test.html",
-		"/C/OpenServer/domains/localhost/migwork/userpage.html",
-		"/C/OpenServer/domains/localhost/migwork/css/style.css",
-		"/C/OpenServer/domains/localhost/Smartgrid/Project2/src/css/styles.css"
+		"/C/OpenServer/domains/localhost/Smartgrid/Project2/package.json"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -575,6 +598,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"buttons",
 			"info",
 			"about_data",
 			"info__about_data",
@@ -598,40 +622,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/pages/publish.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								717,
-								717
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<?php",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "src/controller/collector.class.php",
 					"semi_transient": false,
 					"settings":
@@ -643,8 +638,8 @@
 						"selection":
 						[
 							[
-								1007,
-								1007
+								365,
+								365
 							]
 						],
 						"settings":
@@ -654,7 +649,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/tpl/friendsItem.tpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -662,19 +687,49 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/controller/insertRequest.class.php",
+					"file": "src/precss/styles.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1120,
+						"buffer_size": 8201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238,
-								238
+								7799,
+								7799
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6323.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/controller/selectRequest.class.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1201
 							]
 						],
 						"settings":
@@ -684,67 +739,38 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/pages/registration.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1840,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1726,
-								1838
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/tpl/mainAddPost.tpl",
+					"file": "src/pages/friends.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 454,
+						"buffer_size": 593,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								334,
-								341
+								492,
+								492
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

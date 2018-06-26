@@ -2,9 +2,9 @@
 /*
  * Сверка логина и пароля с БД
  */
-include_once 'database.class.php';
-include_once 'selectRequest.class.php';
-include_once 'config.php';
+require_once 'database.class.php';
+require_once 'selectRequest.class.php';
+require_once 'config.php';
 
 class Login
 {

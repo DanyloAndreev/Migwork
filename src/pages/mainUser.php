@@ -1,11 +1,9 @@
 <?php
-//session_name('log');
 session_start();
-ini_set('display_errors','0');
 
-
+ini_set('display_errors','On');
 require_once '../controller/config.php';
-@require_once '../controller/database.class.php';
+require_once '../controller/database.class.php';
 require_once '../controller/collector.class.php';
 require_once '../controller/selectRequest.class.php';
 require_once '../controller/template.class.php';
@@ -18,15 +16,16 @@ require_once ('../tpl/meta.tpl');
 require_once ('../tpl/header_main.tpl');
 require_once ('../tpl/main.tpl');
 
+
 /*InfoBlock с БД по id*/
 $template = new TemplateHandler();
-echo $template->showInfoBlock($_SESSION['loggedUser'], $paramsCountry, $paramsEarn, $paramsPosition);
+echo $template->showInfoBlock($_SESSION['showUser'], $paramsCountry, $paramsEarn, $paramsPosition);
 
-require_once ('../tpl/mainPublish.tpl');
-$template->showPost($_SESSION['loggedUser']);
+
+$template->showPost($_SESSION['showUser']);
 
 for ($i = 0; $i < count($template->out()); $i++) {
-	echo $template->out()[$i];
+    echo $template->out()[$i];
 }
 
 

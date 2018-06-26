@@ -19,7 +19,6 @@ class TemplateHandler
 	public function __construct()
 	{
 		$this->db = DataBase::getDB();
-		
 	}
 
 	/*Вывод select на странице регистрации из БД*/
@@ -178,6 +177,34 @@ class TemplateHandler
 
 		$this->content = $result;
 	}
+
+	public function showUsers()
+    {
+        $tpl = file_get_contents('../tpl/friendsItem.tpl');
+
+        $usersRequest = "SELECT * FROM USERS WHERE 1 ORDER BY id DESC";
+        $this->db->query($usersRequest);
+        $resultRequest = $this->db->resultset();
+//        var_dump($resultRequest);
+
+        for ($i = 0; $i < count($resultRequest); $i++)
+        {
+            $search = array(
+                '%userName%',
+                '%userAvatar%',
+                '%userId%'
+            );
+
+            $replace = array(
+                $resultRequest[$i]['name'].' '.$resultRequest[$i]['surname'],
+                '../media/img/'.$resultRequest[$i]['id'].'/'.$resultRequest[$i]['id'].'_original.jpg',
+                "friends.php?id=".$resultRequest[$i]['id']
+            );
+
+            $result[$i] = str_replace($search, $replace, $tpl);
+        }
+        $this->content = $result;
+    }
 
 	public function out()
 	{

@@ -1,9 +1,9 @@
         <div class="footerMenu">
             <div class="footerMenu__home">
-                <img src="../images/icons/home.png" alt="home">
+                <a href="../pages/main.php"><img src="../images/icons/home.png" alt="home"></a>
             </div>
             <div class="footerMenu__profile">
-                <img src="../images/icons/profile.png" alt="profile">
+                <a href="../pages/friends.php"><img src="../images/icons/friends.png" alt="profile"></a>
             </div>
             <div class="footerMenu__messages">
                 <img src="../images/icons/messages.png" alt="messages">
